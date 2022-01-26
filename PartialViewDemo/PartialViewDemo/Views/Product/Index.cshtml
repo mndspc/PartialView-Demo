@@ -1,0 +1,22 @@
+﻿@model List<PartialViewDemo.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product List</title>
+</head>
+<body>
+    <div> 
+        <h2>Product Catalog:</h2>
+        @foreach(var product in Model)
+            {
+                @Html.Partial("ProductList", product);
+            }
+    </div>
+</body>
+</html>
